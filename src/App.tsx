@@ -41,9 +41,9 @@ function App() {
       audio.play().catch((err) => console.log(err));
       setDisplayState((prev) => ({
         ...prev,
-        timeType: prev.timeType === "Session" ? "Break" : "Session",
-        time: prev.timeType === "Session" ? breakTime : sessionTime,
-      }));
+        timeType: prev.timeType === "session" ? "break" : "session",
+        time: prev.timeType === "session" ? breakTime : sessionTime,
+    }));
     }
   }, [displayState, breakTime, sessionTime])
   const reset = () => {
